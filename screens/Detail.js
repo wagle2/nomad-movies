@@ -1,3 +1,4 @@
 import React from "react";
-import { text } from "react-native";
+import { Text, StyleSheet } from "react-native";
 export default () => <Text>Detail</Text>
+
