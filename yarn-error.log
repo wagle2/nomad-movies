@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js add react-navigation-tabs
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.17.3/libexec/bin/yarn.js add axios@0.18.0
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Apple/bin:/anaconda3/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/Users/wagle/Documents/GitHub/nomad-movies/node_modules/react-native-gesture-handler/node_modules'
+  Error: EACCES: permission denied, mkdir '/Users/wagle/Documents/GitHub/nomad-movies/node_modules/debug/node_modules'
 
 npm manifest: 
   {
@@ -29,9 +29,11 @@ npm manifest:
     "dependencies": {
       "@expo/vector-icons": "^10.0.5",
       "axios": "^0.19.0",
+      "blueimp-md5": "^2.12.0",
       "expo": "^35.0.0",
       "expo-font": "~7.0.0",
       "prop-types": "^15.7.2",
+      "querystring": "^0.2.0",
       "react": "16.8.3",
       "react-dom": "16.8.3",
       "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
@@ -40,6 +42,8 @@ npm manifest:
       "react-native-screens": "~1.0.0-alpha.23",
       "react-native-web": "^0.11.7",
       "react-navigation": "^4.0.10",
+      "react-navigation-stack": "^1.9.1",
+      "react-navigation-tabs": "^2.5.5",
       "styled-components": "^4.4.0"
     },
     "devDependencies": {
@@ -1393,7 +1397,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.45.tgz#1bf2fa1271bfd20d4c52c3d6c6f08cab8d91c77e"
     integrity sha512-nmb9E7oEtVJ7SmSCH/DeJobXyuRmaofkpoQSimMFu3HKJ5MADtM825SPLhDuWhZ6TElLAQtgJbQmBZuHIRlZoA==
   
-  blueimp-md5@^2.10.0:
+  blueimp-md5@^2.10.0, blueimp-md5@^2.12.0:
     version "2.12.0"
     resolved "https://registry.yarnpkg.com/blueimp-md5/-/blueimp-md5-2.12.0.tgz#be7367938a889dec3ffbb71138617c117e9c130a"
     integrity sha512-zo+HIdIhzojv6F1siQPqPFROyVy7C50KzHv/k/Iz+BtvtVzSHXiMXOpq2wCfNkeBqdCv+V8XOV96tsEt2W/3rQ==
@@ -4315,6 +4319,11 @@ Lockfile:
       split-on-first "^1.0.0"
       strict-uri-encode "^2.0.0"
   
+  querystring@^0.2.0:
+    version "0.2.0"
+    resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
+    integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
+  
   querystringify@^2.1.1:
     version "2.1.1"
     resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
@@ -4377,6 +4386,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.10.0.tgz#3d6a031e57fff73c3cfa0347feb3e8f40c5141e5"
     integrity sha512-WRki2sBb7MTpYp7FtDEmSeGKX2vamYyq3rc9o7fKUG+/DHVyJu69NnvJsiSwwhh2Tt8XN40MQHkDBEXwyfxncQ==
   
+  react-lifecycles-compat@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+    integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+  
   react-native-branch@~3.0.1:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-3.0.1.tgz#5b07b61cbd290168cd3c3662e017ebe0f356d2ca"
@@ -4396,7 +4410,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.2.0.tgz#9219227a52a5dfa4d34c324596d6726ccd874293"
     integrity sha512-vkWRHrPK5qfHP/ZawlRoo38oeYe9NZaaOH/lmFxRcsKzaSK6x3H5ZPXI8lK6MfTLveqwo1QhJje3zIKXO4nQQw==
   
-  react-native-safe-area-view@^0.14.1:
+  react-native-safe-area-view@^0.14.1, react-native-safe-area-view@^0.14.6:
     version "0.14.8"
     resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.14.8.tgz#ef33c46ff8164ae77acad48c3039ec9c34873e5b"
     integrity sha512-MtRSIcZNstxv87Jet+UsPhEd1tpGe8cVskDXlP657x6rHpSrbrc+y13ZNXrwAgGNNhqQNX7UJT68ZIq//ZRmvw==
@@ -4409,6 +4423,11 @@ Lockfile:
     integrity sha512-tOxHGQUN83MTmQB4ghoQkibqOdGiX4JQEmeyEv96MKWO/x8T2PJv84ECUos9hD3blPRQwVwSpAid1PPPhrVEaw==
     dependencies:
       debounce "^1.2.0"
+  
+  react-native-tab-view@^2.9.0:
+    version "2.10.0"
+    resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.10.0.tgz#5e249e5650502010013449ffd4e5edc18a95364b"
+    integrity sha512-qgexVz5eO4yaFjdkmn/sURXgVvaBo6pZD/q1eoca96SbPVbaH3WzVhF3bRUfeTHwZkXwznFTpS3JURqIFU8vQA==
   
   react-native-view-shot@2.6.0:
     version "2.6.0"
@@ -4485,6 +4504,23 @@ Lockfile:
       ws "^1.1.5"
       xmldoc "^0.4.0"
       yargs "^9.0.0"
+  
+  react-navigation-stack@^1.9.1:
+    version "1.9.1"
+    resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-1.9.1.tgz#6634ad4e782fa52a6c38adccac2d2b795d7de756"
+    integrity sha512-UI8P27hKzpcDTCjU8wn8LkyC9sZRYSwIfyUaU2PyOCdkoG1YOpzqbWTINiPYLglUeaGjr1iL/cyiCTBIpLFPAw==
+    dependencies:
+      prop-types "^15.7.2"
+  
+  react-navigation-tabs@^2.5.5:
+    version "2.5.5"
+    resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.5.5.tgz#f651355b140b35ef5753aac434da5e1943abdd26"
+    integrity sha512-oIL5V4agCxcqbWNZzF1h/cm1bxKXNUeGrWaRQEEnuN3TXTEj1SVRz33CnKYg30pVvgF5L2p28sOk15Z4Ao01NQ==
+    dependencies:
+      hoist-non-react-statics "^3.3.0"
+      react-lifecycles-compat "^3.0.4"
+      react-native-safe-area-view "^0.14.6"
+      react-native-tab-view "^2.9.0"
   
   react-navigation@^4.0.10:
     version "4.0.10"
