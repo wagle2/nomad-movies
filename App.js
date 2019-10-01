@@ -1,10 +1,9 @@
 import React from "react";
 import { AppLoading } from "expo";
-import { Ionicons } from "@expo/vector-icons";
-import { StyleSheet, Text, View } from "react-native";
-import * as Font from 'expo-font';
-import MainNavigation from "./navigation/MainNavigation";
 import { StatusBar } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import MainNavigation from "./navigation/MainNavigation";
+import * as Font from "expo-font";
 
 export default class App extends React.Component {
   state = {
@@ -26,8 +25,8 @@ export default class App extends React.Component {
     if (loaded) {
       return (
         <>
-        <StatusBar barStyle="light-content"/>
-        <MainNavigation />
+          <StatusBar barStyle="light-content" />
+          <MainNavigation />
         </>
       );
     } else {

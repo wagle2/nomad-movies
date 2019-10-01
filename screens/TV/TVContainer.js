@@ -14,20 +14,25 @@ export default class extends React.Component {
     let popular, topRated, airingToday, error;
     try {
       ({
-        data: { result: popular }
+        data: { results: popular }
       } = await tv.getPopular());
       ({
-        data: { result: topRated }
+        data: { results: topRated }
       } = await tv.getTopRated());
       ({
-        data: { result: airingToday }
+        data: { results: airingToday }
       } = await tv.getAiringToday());
     } catch (error) {
-        console.log(error);
-        error = "Can't get TV";
+      console.log(error);
+      error = "Can't get TV";
     } finally {
-        this.setState({loading:false,error,popular,topRated,airingToday});
-        console.log(this.state);
+      this.setState({
+        loading: false,
+        error,
+        popular,
+        topRated,
+        airingToday
+      });
     }
   }
 
@@ -36,9 +41,9 @@ export default class extends React.Component {
     return (
       <TVPresenter
         loading={loading}
-        popular={popular}
-        topRated={topRated}
         airingToday={airingToday}
+        topRated={topRated}
+        popular={popular}
       />
     );
   }

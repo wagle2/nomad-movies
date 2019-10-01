@@ -4,7 +4,7 @@ import styled from "styled-components";
 import makePhotoUrl from "../utils/makePhotoUrl";
 import Layout from "../constants/Layout";
 import MoviePoster from "./MoviePoster";
-import { TINT_COLOR } from "../constants/Color";
+import { TINT_COLOR, GREY_COLOR } from "../constants/Colors";
 import MovieRating from "./MovieRating";
 
 const Container = styled.View`
@@ -45,18 +45,18 @@ const Overview = styled.Text`
 `;
 
 const VoteContainer = styled.View`
-    margin: 10px 0px;
+  margin: 10px 0px;
 `;
 
-const ButtonContainer = styled.TouchableOpacity`
-    background-color: #e74c3c;
-    border-radius: 5px;
-    padding: 8px;
+const BtnContainer = styled.TouchableOpacity`
+  background-color: #e74c3c;
+  border-radius: 5px;
+  padding: 8px;
 `;
 
-const ButtonText = styled.Text`
-color : white;
-font-size: 12px;
+const BtnText = styled.Text`
+  color: white;
+  font-size: 12px;
 `;
 
 const MovieSlide = ({
@@ -84,7 +84,9 @@ const MovieSlide = ({
               : overview}
           </Overview>
         ) : null}
-        <ButtonContainer><ButtonText>View Details</ButtonText></ButtonContainer>
+        <BtnContainer>
+          <BtnText>View details</BtnText>
+        </BtnContainer>
       </Column>
     </Content>
   </Container>

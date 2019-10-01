@@ -1,5 +1,5 @@
 import React from "react";
-import MoviePresenter from "./MoviesPresenter";
+import MoviesPresenter from "./MoviesPresenter";
 import { movies } from "../../api";
 
 export default class extends React.Component {
@@ -23,15 +23,29 @@ export default class extends React.Component {
       ({
         data: { results: nowPlaying }
       } = await movies.getNowPlaying());
-    } catch {
-      errpr = "Can't get Movies."
+    } catch (error) {
+      console.log(error);
+      error = "Can't get Movies.";
     } finally {
-      this.setState({ loading: false, error, upcoming, popular, nowPlaying });
+      this.setState({
+        loading: false,
+        error,
+        upcoming,
+        popular,
+        nowPlaying
+      });
     }
   }
 
   render() {
     const { loading, upcoming, popular, nowPlaying } = this.state;
-    return <MoviePresenter loading={loading} upcoming={upcoming} popular={popular} nowPlaying={nowPlaying}/>;
+    return (
+      <MoviesPresenter
+        upcoming={upcoming}
+        popular={popular}
+        loading={loading}
+        nowPlaying={nowPlaying}
+      />
+    );
   }
 }
